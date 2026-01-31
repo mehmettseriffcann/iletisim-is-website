@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Tailwind v4 standart katmanları otomatik gelir, 
+   ancak özel müdahaleler için @layer direktiflerini kullanabilirsin */
+
+@layer base {
+  /* Buraya sitenin genel font ve renk ayarlarını koyabilirsin */
+  :root {
+    --background: #f8fafc; /* bg-slate-50 */
+    --foreground: #0f172a; /* bg-slate-900 */
+  }
+
+  body {
+    @apply antialiased bg-slate-50 text-slate-900 min-h-screen flex flex-col;
+  }
+}
+
+/* Eğer tarayıcıda scroll (kaydırma) çubuğu sorunları yaşarsan burası kurtarıcıdır */
+html {
+  scroll-behavior: smooth;
+}
