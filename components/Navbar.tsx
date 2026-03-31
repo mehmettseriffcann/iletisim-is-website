@@ -31,7 +31,7 @@ export default function Navbar() {
         </div>
         
         {/* ORTA BÖLÜM: BOŞLUK (Masaüstünde menüyü sağa iter) */}
-        <div className="flex-grow flex justify-center">
+        <div className="grow flex justify-center">
             {/* MASAÜSTÜ MENÜ */}
             <ul className="hidden lg:flex space-x-8 font-bold text-[11px] uppercase tracking-widest whitespace-nowrap">
               <li><Link href="/" className="hover:text-red-500 transition-colors">Ana Sayfa</Link></li>

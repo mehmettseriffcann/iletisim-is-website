@@ -21,13 +21,13 @@ export default function Kurumsal() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">
             <h2 className="text-3xl font-black text-slate-900 uppercase italic border-l-8 border-red-600 pl-4 leading-none">
-              SINIF TAVRI VE <br/><span className="text-red-600">BİLİMSEL TEMEL</span>
+              SINIF SENDİKACILIĞI VE <br/><span className="text-red-600">BİLİMSEL TEMEL</span>
             </h2>
             <p className="text-slate-700 leading-relaxed text-lg font-medium italic">
-              İletişim İş, Ocak 2026 itibarıyla iletişim işçilerinin hak mücadelesinde analitik disiplini ve sınıf tavrını birleştiren tek merkezdir.
+              İletişim İş, Ocak 2026 itibarıyla iletişim işçilerinin hak mücadelesinde analitik disiplini ve sınıf sendikacılığını birleştiren tek merkezdir.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Bizim için sendikacılık sadece sloganlardan ibaret değildir. Matematik mühendisliği disiplininden aldığımız analitik bakış açısını, işçi sınıfının hak arama mücadelesine entegre ediyoruz. Türk Telekom ve sektörün diğer devlerinde yaşanan her türlü hak kaybına karşı, veriye dayalı ve geri adım atmayan bir hat kuruyoruz.
+              Bizim için sendikacılık sadece sloganlardan ibaret değildir. İletişim, Haberleşme, Posta ve Çağrı Merkezi İşçilerinin yaşadığı her türlü hak kaybına karşı, işçi iradesine dayalı ve geri adım atmayan bir hat kuruyoruz.
             </p>
           </div>
 

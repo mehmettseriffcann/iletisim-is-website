@@ -1,9 +1,10 @@
-import React from 'react';
+"use client"; // Statik export için istemci tarafında çalışması şart
+
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import NextImage from 'next/image'; // Image bileşenini import ettik
+import NextImage from 'next/image';
 import { getHaberler } from '@/lib/getHaberler';
 
-// Haber nesnesi için bir tip (interface) tanımlıyoruz
 interface Haber {
   slug: string;
   title: string;
@@ -14,10 +15,33 @@ interface Haber {
   content: string;
 }
 
-export const dynamic = 'force-dynamic';
+export default function HaberlerPage() {
+  const [tumHaberler, setTumHaberler] = useState<Haber[]>([]);
+  const [loading, setLoading] = useState(true);
 
-export default async function HaberlerPage() {
-  const tumHaberler: Haber[] = await getHaberler(); // any yerine Haber[] kullandık
+  useEffect(() => {
+    async function veriyiCek() {
+      try {
+        const data = await getHaberler();
+        setTumHaberler(data);
+      } catch (error) {
+        console.error("Haberler çekilirken hata oluştu:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    veriyiCek();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="w-full min-h-screen flex items-center justify-center bg-white">
+        <p className="text-xl font-black uppercase italic animate-pulse tracking-widest text-slate-900">
+          Haberler Yükleniyor...
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full bg-white text-left">
@@ -38,14 +62,13 @@ export default async function HaberlerPage() {
             <Link href={`/haberler/${haber.slug}`} key={haber.slug} className="group">
               <article className="flex flex-col h-full bg-white border border-slate-100 rounded-3xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 text-left">
                 
-                {/* next/image kullanarak optimizasyon hatasını çözdük */}
                 <div className="aspect-video w-full bg-slate-200 relative overflow-hidden">
                   <NextImage 
                     src={haber.image || "https://via.placeholder.com/600x400"} 
                     alt={haber.title} 
                     fill
                     className="object-cover transform group-hover:scale-110 transition-transform duration-700" 
-                    unoptimized // Test aşamasında harici URL'ler için güvenli
+                    unoptimized 
                   />
                   <span className="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest z-10 italic">
                     {haber.category}

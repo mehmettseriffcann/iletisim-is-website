@@ -3,7 +3,6 @@ import React from 'react';
 export default function Mevzuat() {
   const maddeler = [
     { id: "M-1", baslik: "Sendika Tüzüğü", aciklama: "İletişim İş Sendikası'nın temel işleyiş ve yönetim kurallarını içeren ana metin." },
-    { id: "M-2", baslik: "Toplu İş Sözleşmesi", aciklama: "Haberleşme iş kolunda yürürlükte olan genel haklar ve kazanımlar." },
     { id: "M-3", baslik: "6356 Sayılı Kanun", aciklama: "Sendikalar ve Toplu İş Sözleşmesi Kanunu çerçevesinde işçi hakları." }
   ];
 
