@@ -20,10 +20,9 @@ const genelHukukSorulari = [
   { id: 4, soru: "İş yerinde 'Baskı ve Mobbing' varsa sendika ne yapar?", cevap: "Sizi yalnızlaştırmalarına izin vermeyiz. Sendika temsilcimiz ve avukatlarımızla her an yanınızdayız. Örgütlü işçiye çarptıklarında geri adım atarlar." },
   { id: 5, soru: "Toplu İş Sözleşmesi (TİS) neden hayati önemdedir?", cevap: "TİS, iş yerinin anayasasıdır. Patronun keyfi olarak değiştirebileceği şirket kuralları yerine, işçinin imzasının olduğu hukuki bir belgedir." },
   { id: 6, soru: "Fazla mesai ücretimi alamazsam ne yapmalıyım?", cevap: "Hakkınız olan her dakika sizin emeğinizdir. Ücreti ödenmeyen fazla mesai hırsızlıktır. Sendikamız, bu tür alacakların tahsili için gerekli hukuki süreci başlatır." },
-  { id: 7, soru: "Grev bir hak mıdır, yoksa suç mu?", cevap: "Grev, işçi sınıfının elindeki en büyük ve en yasal silahtır. Sömürüye karşı üretimi durdurmak anayasal bir haktır." },
+  { id: 7, soru: "Grev Nedir?", cevap: "Grev, işçi sınıfının elindeki en büyük  silahtır. Düşük ücretlere,ağır çalışma koşullarına ve sömürüye karşı işçi sınıfının en etkili gücü; üretimden gelen gücüdür." },
   { id: 8, soru: "İstifaya zorlanıyorum, neye imza atmalıyım?", cevap: "Hiçbir şeye! Önünüze konulan 'gönüllü çıkış' veya 'ibraname' gibi kağıtlar aleyhinizedir. Hemen bizi arayın." },
-  { id: 9, soru: "Sarı sendikalar ile İletişim İş arasındaki fark nedir?", cevap: "Sarı sendikalar patronun odasında kurulur. İletişim İş ise meydanlarda kurulur, işçiye sınıf kardeşi olarak bakar." },
-  { id: 10, soru: "Emekli olduktan sonra sendikal bağım kopar mı?", cevap: "Sınıf mücadelesi emeklilikle bitmez. Emekli üyelerimiz, deneyimleriyle genç kuşaklara rehberlik etmeye devam ederler." }
+  { id: 9, soru: "Emekli olduktan sonra sendikal bağım kopar mı?", cevap: "Sınıf mücadelesi emeklilikle bitmez. Emekli üyelerimiz, deneyimleriyle genç kuşaklara rehberlik etmeye devam ederler." }
 ];
 
 export const dynamic = 'force-dynamic';

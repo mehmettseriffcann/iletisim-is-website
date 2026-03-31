@@ -24,7 +24,7 @@ export default function Kurumsal() {
               SINIF SENDİKACILIĞI VE <br/><span className="text-red-600">BİLİMSEL TEMEL</span>
             </h2>
             <p className="text-slate-700 leading-relaxed text-lg font-medium italic">
-              İletişim İş, Ocak 2026 itibarıyla iletişim işçilerinin hak mücadelesinde analitik disiplini ve sınıf sendikacılığını birleştiren tek merkezdir.
+              İletişim İş, iletişim işçilerinin hak mücadelesinde analitik disiplini ve sınıf sendikacılığını birleştiren tek merkezdir.
             </p>
             <p className="text-slate-600 leading-relaxed">
               Bizim için sendikacılık sadece sloganlardan ibaret değildir. İletişim, Haberleşme, Posta ve Çağrı Merkezi İşçilerinin yaşadığı her türlü hak kaybına karşı, işçi iradesine dayalı ve geri adım atmayan bir hat kuruyoruz.
@@ -33,9 +33,9 @@ export default function Kurumsal() {
 
           <div className="grid grid-cols-1 gap-6">
             <div className="bg-slate-50 p-8 rounded-2xl border-t-4 border-slate-900 shadow-sm group hover:border-red-600 transition-colors">
-              <h3 className="font-black text-slate-900 uppercase mb-2 italic">Şeffaf Yönetim</h3>
+              <h3 className="font-black text-slate-900 uppercase mb-2 italic">Söz Yetki Karar İşçiye</h3>
               <p className="text-sm text-slate-600 leading-relaxed italic">
-                Veri temelli yönetim anlayışımızla üyelerimizin haklarını ve toplu sözleşme süreçlerini matematiksel bir kesinlikle takip ediyoruz.
+                endikal mücadelemizi sınıf bilinciyle örüyor, toplu sözleşmeleri patronların lütfuna değil, işçinin örgütlü gücüne ve sarsılmaz haklılığına dayandırıyoruz. Ekmek ve haysiyet kavgamızda, sermayeye karşı milim geri adım atmıyoruz!
               </p>
             </div>
             <div className="bg-slate-50 p-8 rounded-2xl border-t-4 border-red-600 shadow-sm group hover:border-slate-900 transition-colors">
@@ -77,8 +77,8 @@ export default function Kurumsal() {
 
         <div className="container mx-auto text-center max-w-5xl relative z-10">
           <h2 className="text-5xl md:text-8xl font-black text-white uppercase italic tracking-tighter mb-8 leading-[0.8]">
-            SÖZ <span className="text-slate-900">MEYDANIN</span>, <br/>
-            KARAR <span className="text-slate-900">İŞÇİNİN!</span>
+            SÖZ <span className="text-slate-900">YETKİ</span>, <br/>
+            KARAR <span className="text-slate-900">İŞÇİYE</span>
           </h2>
           
           <p className="text-white text-xl md:text-2xl mb-12 font-black max-w-3xl mx-auto leading-tight uppercase italic opacity-90">
@@ -93,7 +93,7 @@ export default function Kurumsal() {
           </div>
 </Link>
           <div className="mt-16 flex flex-wrap justify-center gap-10 text-white/60 text-[11px] font-black uppercase tracking-[0.4em]">
-             <span className="border-b-2 border-slate-900 pb-1">#SınıfTavrı</span>
+             <span className="border-b-2 border-slate-900 pb-1">#SınıfSENDİKACILIGI</span>
              <span className="border-b-2 border-slate-900 pb-1">#ÖrgütlüGüç</span>
              <span className="border-b-2 border-slate-900 pb-1">#İletişimİşDireniştir</span>
           </div>
