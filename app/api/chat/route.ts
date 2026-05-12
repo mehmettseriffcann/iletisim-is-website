@@ -1,6 +1,9 @@
 import { google } from '@ai-sdk/google';
 import { streamText } from 'ai';
 
+export const runtime = 'edge';
+export const maxDuration = 30;
+
 // Sistem yönergesi (Prompt): AI'ın nasıl davranacağını ve hangi bilgilere sahip olduğunu belirler.
 const systemPrompt = `Sen, İletişim İş Sendikası (İletişim, Haberleşme, Posta ve Çağrı Merkezi İşçileri Sendikası) için özel olarak geliştirilmiş resmi bir asistan ve canlı destek yapay zekasısın.
 Görevlerin:
