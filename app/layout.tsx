@@ -2,6 +2,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar' // Navbar'ı buradan çağırıyoruz
 import Link from 'next/link'
 import Image from 'next/image'
+import Chatbot from '@/components/Chatbot'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,6 +12,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
 
         <main className="grow w-full">{children}</main>
+        
+        <Chatbot />
 
         {/* FOOTER - TÜM SÜTUNLAR KORUNDU */}
         <footer className="bg-slate-900 text-slate-300 py-16 border-t border-slate-800 w-full mt-auto">
@@ -55,13 +58,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <h4 className="text-white font-black text-sm uppercase tracking-widest mb-6 border-b border-red-600 pb-2 inline-block">İletişim</h4>
                 <ul className="text-xs space-y-4 text-left">
                   <li className="flex flex-col"><span className="text-red-600 font-black uppercase text-[10px] mb-1">E-Posta:</span><span className="opacity-70 break-all font-mono">iletisim@iletisimis.org.tr</span></li>
-                  <li className="flex flex-col"><span className="text-red-600 font-black uppercase text-[10px] mb-1">Destek Hattı:</span><span className="opacity-70 font-mono tracking-tighter">0212 XXX XX XX</span></li>
+                  <li className="flex flex-col"><span className="text-red-600 font-black uppercase text-[10px] mb-1">Destek Hattı:</span><span className="opacity-70 font-mono tracking-tighter">0531 969 86 72</span></li>
                 </ul>
               </div>
             </div>
-            <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] opacity-30 text-center md:text-left">
-              <p>© 2026 İletişim İş Sendikası.</p>
-              <div className="flex space-x-6">
+            <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold opacity-30 text-center md:text-left">
+              <div className="flex flex-col gap-2">
+                <p className="uppercase tracking-[0.3em]">© 2026 İletişim İş Sendikası.</p>
+                <p className="font-medium text-[11px] opacity-80">Bu internet sitesi Friedrich-Ebert-Stiftung Vakfı Türkiye Temsilciliği katkılarıyla hazırlanmıştır.</p>
+              </div>
+              <div className="flex space-x-6 uppercase tracking-[0.3em]">
                  <Link href="/" className="hover:text-white transition">KVKK</Link>
                  <Link href="/" className="hover:text-white transition">Kullanım Koşulları</Link>
               </div>
