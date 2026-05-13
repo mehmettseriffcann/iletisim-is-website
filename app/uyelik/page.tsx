@@ -11,7 +11,7 @@ export default function UyelikRehberi() {
             MÜCADELEYE <span className="text-slate-900">OMUZ VER</span>
           </h1>
           <p className="text-white/90 font-bold uppercase tracking-widest text-sm max-w-2xl leading-relaxed">
-            İletişim işçilerinin onurlu geleceği için örgütleniyoruz. 
+            İletişim işçilerinin onurlu geleceği için örgütleniyoruz.
             E-Devlet üzerinden sadece 2 dakikada İletişim-İş saflarına katılabilirsiniz.
           </p>
         </div>
@@ -20,7 +20,7 @@ export default function UyelikRehberi() {
       {/* 2. ADIM ADIM ÜYELİK REHBERİ */}
       <section className="container mx-auto py-20 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          
+
           {/* Sol Kolon: Adımlar */}
           <div className="lg:col-span-2 space-y-12">
             <h2 className="text-3xl font-black text-slate-900 uppercase italic border-l-8 border-red-600 pl-4">
@@ -62,7 +62,7 @@ export default function UyelikRehberi() {
                 <div>
                   <h3 className="font-black text-slate-900 uppercase text-lg mb-2">İletişim-İş&apos;i Seçin</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
-                    Listelenen sendikalar arasından <span className="font-bold text-red-600">İLETİŞİM-İŞ (Sendika Kodu: 010)</span> sendikasını bulun ve &quot;Üye Ol&quot; butonuna basın.
+                    Listelenen sendikalar arasından <span className="font-bold text-red-600">İLETİŞİM-İŞ (Sendika Kodu: 007)</span> sendikasını bulun ve &quot;Üye Ol&quot; butonuna basın.
                   </p>
                 </div>
               </div>
@@ -82,9 +82,9 @@ export default function UyelikRehberi() {
             </div>
 
             <div className="bg-slate-50 p-8 border-l-4 border-slate-900 italic">
-               <p className="text-sm text-slate-700">
-                 <strong>Not:</strong> 6356 sayılı kanun gereği, e-Devlet üzerinden yapılan üyeliklerde işverenin bilgisi olmaz, üyelik tamamen kişisel bir haktır ve gizlidir.
-               </p>
+              <p className="text-sm text-slate-700">
+                <strong>Not:</strong> 6356 sayılı kanun gereği, e-Devlet üzerinden yapılan üyeliklerde işverenin bilgisi olmaz, üyelik tamamen kişisel bir haktır ve gizlidir.
+              </p>
             </div>
           </div>
 
@@ -92,8 +92,8 @@ export default function UyelikRehberi() {
           <div className="space-y-6">
             <div className="bg-slate-900 p-10 text-white rounded-none -skew-y-2">
               <h4 className="text-2xl font-black uppercase italic mb-6 leading-tight">Hemen Şimdi Başlayın</h4>
-              <Link 
-                href="https://www.turkiye.gov.tr/csgb-isci-sendikalari-uyelik-islemleri" 
+              <Link
+                href="https://www.turkiye.gov.tr/csgb-isci-sendikalari-uyelik-islemleri"
                 target="_blank"
                 className="block w-full bg-red-600 hover:bg-white hover:text-red-600 text-white text-center font-black py-4 transition-all uppercase tracking-widest text-sm"
               >
