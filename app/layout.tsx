@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold opacity-30 text-center md:text-left">
               <div className="flex flex-col gap-2">
                 <p className="uppercase tracking-[0.3em]">© 2026 İletişim İş Sendikası.</p>
-                <p className="font-medium text-[11px] opacity-80">Bu internet sitesi Friedrich-Ebert-Stiftung Vakfı Türkiye Temsilciliği katkılarıyla hazırlanmıştır.</p>
+                <p className="font-medium text-[11px] opacity-80">Bu internet sitesi <a href="https://turkey.fes.de/index.html" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 underline transition-colors">Friedrich-Ebert-Stiftung Vakfı Türkiye Temsilciliği</a> katkılarıyla hazırlanmıştır.</p>
               </div>
               <div className="flex space-x-6 uppercase tracking-[0.3em]">
                  <Link href="/" className="hover:text-white transition">KVKK</Link>
