@@ -1,18 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import { BookOpen, Calendar, ArrowRight, Users, GraduationCap, CheckCircle2, Play, X } from 'lucide-react'
+import { Users, GraduationCap, Play, X } from 'lucide-react'
 import Image from 'next/image'
-
-// TypeScript Tiplemesi
-interface Egitim {
-  id: number;
-  title: string;
-  category: string;
-  date: string;
-  desc: string;
-  status: 'Aktif' | 'Tamamlandı';
-}
 
 interface Soru {
   id: number;
@@ -23,33 +13,6 @@ interface Soru {
 }
 
 export default function EgitimPage() {
-  const [egitimler] = useState<Egitim[]>([
-    {
-      id: 1,
-      title: "Temel İş Hukuku Eğitimi",
-      category: "Hukuk",
-      date: "15 Şubat 2026",
-      status: "Aktif",
-      desc: "İş sözleşmeleri, fazla mesai ve kıdem tazminatı konularında sendikal eğitim programı."
-    },
-    {
-      id: 2,
-      title: "İş Sağlığı ve Güvenliği",
-      category: "İSG",
-      date: "22 Şubat 2026",
-      status: "Aktif",
-      desc: "İletişim iş kolundaki riskler ve yasal güvenlik önlemleri hakkında kapsamlı bilgilendirme."
-    },
-    {
-      id: 3,
-      title: "Sendikal Örgütlenme Semineri",
-      category: "Sendika",
-      date: "10 Mart 2026",
-      status: "Aktif",
-      desc: "İş yerinde temsilcilik ve demokratik örgütlenme süreçleri üzerine atölye çalışması."
-    }
-  ]);
-
   const [activeVideo, setActiveVideo] = useState<Soru | null>(null);
 
   // 10 Soru 10 Cevap Listesi (Yüklenen YouTube linkleriyle birlikte)
@@ -100,43 +63,8 @@ export default function EgitimPage() {
         </div>
       </section>
 
-      {/* Eğitim Kartları */}
-      <section className="container mx-auto px-4 -mt-10 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-          {egitimler.map((egitim) => (
-            <div key={egitim.id} className="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden group hover:shadow-2xl transition-all duration-300">
-              <div className="p-8">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="p-3 bg-slate-50 rounded-2xl group-hover:bg-red-50 transition-colors">
-                    <BookOpen className="w-6 h-6 text-red-600" />
-                  </div>
-                  <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest flex items-center gap-1 ${
-                    egitim.status === 'Aktif' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-500'
-                  }`}>
-                    {egitim.status === 'Aktif' && <CheckCircle2 className="w-3 h-3" />}
-                    {egitim.status}
-                  </span>
-                </div>
-                <div className="text-red-600 font-bold text-[10px] uppercase tracking-widest mb-2">{egitim.category}</div>
-                <h3 className="text-xl font-black uppercase tracking-tight mb-4 leading-tight">{egitim.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-6">{egitim.desc}</p>
-                
-                <div className="flex items-center gap-3 text-slate-400 text-xs font-bold border-t border-slate-50 pt-6">
-                  <Calendar className="w-4 h-4" />
-                  <span>{egitim.date}</span>
-                </div>
-                
-                <button className="w-full mt-6 bg-slate-900 text-white py-4 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-red-600 transition-colors flex items-center justify-center gap-2 group">
-                  Eğitime Kaydol <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* 10 Soru 10 Cevap Bölümü */}
-      <section className="bg-slate-900 text-white py-24 px-4 border-t border-slate-800">
+      <section className="bg-slate-900 text-white pb-24 px-4 border-t border-slate-800/40">
         <div className="container mx-auto">
           <div className="mb-16 border-l-8 border-red-600 pl-6 text-left">
             <span className="text-red-600 font-black uppercase tracking-[0.3em] text-[10px] mb-2 block">Soru & Cevap</span>
