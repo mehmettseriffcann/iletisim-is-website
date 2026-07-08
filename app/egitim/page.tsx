@@ -19,6 +19,7 @@ interface Soru {
   title: string;
   coverSrc: string;
   videoSrc: string;
+  youtubeId?: string;
 }
 
 export default function EgitimPage() {
@@ -51,13 +52,19 @@ export default function EgitimPage() {
 
   const [activeVideo, setActiveVideo] = useState<Soru | null>(null);
 
-  // 10 Soru 10 Cevap Listesi
-  const sorular: Soru[] = Array.from({ length: 10 }, (_, i) => ({
-    id: i + 1,
-    title: `Soru ${i + 1}`,
-    coverSrc: `/egitim/kapaklar/soru-${i + 1}.png`,
-    videoSrc: `/egitim/videolar/soru-${i + 1}.mp4`
-  }));
+  // 10 Soru 10 Cevap Listesi (Yüklenen YouTube linkleriyle birlikte)
+  const sorular: Soru[] = [
+    { id: 1, title: "Uzaktan Çalışma Nedir?", coverSrc: "/egitim/kapaklar/soru-1.png", videoSrc: "/egitim/videolar/soru-1.mp4", youtubeId: "kIuVS0-komw" },
+    { id: 2, title: "Mesai Ne Zaman Biter?", coverSrc: "/egitim/kapaklar/soru-2.png", videoSrc: "/egitim/videolar/soru-2.mp4", youtubeId: "" },
+    { id: 3, title: "Mobbing Nedir?", coverSrc: "/egitim/kapaklar/soru-3.png", videoSrc: "/egitim/videolar/soru-3.mp4", youtubeId: "IVU9m6j-KQM" },
+    { id: 4, title: "İşveren Ne Kadar Denetleyebilir?", coverSrc: "/egitim/kapaklar/soru-4.png", videoSrc: "/egitim/videolar/soru-4.mp4", youtubeId: "DXJ5N6kmmpo" },
+    { id: 5, title: "Uzaktan Çalışma İş Sağlığı ve Güvenliği", coverSrc: "/egitim/kapaklar/soru-5.png", videoSrc: "/egitim/videolar/soru-5.mp4", youtubeId: "0FRPJITUT-0" },
+    { id: 6, title: "Sendika Nedir?", coverSrc: "/egitim/kapaklar/soru-6.png", videoSrc: "/egitim/videolar/soru-6.mp4", youtubeId: "4I2PEahUaQ0" },
+    { id: 7, title: "Sendikaya Üye Olma", coverSrc: "/egitim/kapaklar/soru-7.png", videoSrc: "/egitim/videolar/soru-7.mp4", youtubeId: "QAGP2aipWIk" },
+    { id: 8, title: "TİS Nedir?", coverSrc: "/egitim/kapaklar/soru-8.png", videoSrc: "/egitim/videolar/soru-8.mp4", youtubeId: "qUza6vLSNuE" },
+    { id: 9, title: "Sendika Destek Kanalları", coverSrc: "/egitim/kapaklar/soru-9.png", videoSrc: "/egitim/videolar/soru-9.mp4", youtubeId: "5ct6rg2RPH0" },
+    { id: 10, title: "Uluslararası Sendika", coverSrc: "/egitim/kapaklar/soru-10.png", videoSrc: "/egitim/videolar/soru-10.mp4", youtubeId: "QXsrKpDlrrc" }
+  ];
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -186,15 +193,16 @@ export default function EgitimPage() {
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md transition-all duration-300 animate-in fade-in duration-200"
           onClick={() => setActiveVideo(null)}
         >
+          {/* Dikey (Shorts) videoları tam sığdırmak için max-w-[360px] ve aspect-[9/16] kullanıldı */}
           <div 
-            className="relative w-full max-w-4xl bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 animate-in zoom-in-95 duration-200"
+            className="relative w-full max-w-[360px] bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 animate-in zoom-in-95 duration-200"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Üst Bilgi Barı */}
             <div className="flex justify-between items-center px-6 py-4 bg-slate-900 border-b border-slate-800">
               <h3 className="text-sm md:text-base font-black uppercase text-white tracking-widest flex items-center gap-3">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
-                10 SORU 10 CEVAP: SORU {activeVideo.id}
+                SORU {activeVideo.id}
               </h3>
               <button
                 onClick={() => setActiveVideo(null)}
@@ -204,14 +212,25 @@ export default function EgitimPage() {
               </button>
             </div>
 
-            {/* Video Player */}
-            <div className="aspect-video bg-black relative">
-              <video
-                src={activeVideo.videoSrc}
-                controls
-                autoPlay
-                className="w-full h-full object-contain"
-              />
+            {/* Video Player Area */}
+            <div className="aspect-[9/16] bg-black relative">
+              {activeVideo.youtubeId ? (
+                <iframe
+                  src={`https://www.youtube.com/embed/${activeVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1`}
+                  title={activeVideo.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              ) : (
+                <video
+                  src={activeVideo.videoSrc}
+                  controls
+                  autoPlay
+                  className="w-full h-full object-contain"
+                />
+              )}
             </div>
           </div>
         </div>
