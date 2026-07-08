@@ -88,6 +88,9 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* 10 SORU 10 CEVAP BÖLÜMÜ */}
+      <SoruCevapSection />
+
       {/* BÖLÜM 3: GÜNCEL HABERLER (DİNAMİK) */}
       <section className="container mx-auto py-24 px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 text-left">
@@ -114,9 +117,6 @@ export default async function Home() {
           ))}
         </div>
       </section>
-
-      {/* 10 SORU 10 CEVAP BÖLÜMÜ */}
-      <SoruCevapSection />
       
       {/* BÖLÜM 4: BİLGİ BANKASI */}
       <section className="bg-slate-50 py-24 px-4 border-y border-slate-200">
