@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import { getHaberler } from '@/lib/getHaberler';
+import SoruCevapSection from '@/components/SoruCevapSection';
 
 interface Haber {
   slug: string;
@@ -113,9 +114,12 @@ export default async function Home() {
           ))}
         </div>
       </section>
+
+      {/* 10 SORU 10 CEVAP BÖLÜMÜ */}
+      <SoruCevapSection />
       
       {/* BÖLÜM 4: BİLGİ BANKASI */}
-      <section className="bg-slate-50 py-24 px-4 border-y border-slate-200 mt-20">
+      <section className="bg-slate-50 py-24 px-4 border-y border-slate-200">
         <div className="container mx-auto max-w-4xl text-left">
           <div className="mb-16 border-l-8 border-red-600 pl-6 text-left">
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase italic tracking-tighter leading-none text-left">
