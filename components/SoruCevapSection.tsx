@@ -17,7 +17,7 @@ export default function SoruCevapSection() {
 
   const sorular: Soru[] = [
     { id: 1, title: "Uzaktan Çalışma Nedir?", coverSrc: "/egitim/kapaklar/soru-1.png", videoSrc: "/egitim/videolar/soru-1.mp4", youtubeId: "kIuVS0-komw" },
-    { id: 2, title: "Mesai Ne Zaman Biter?", coverSrc: "/egitim/kapaklar/soru-2.png", videoSrc: "/egitim/videolar/soru-2.mp4", youtubeId: "" },
+    { id: 2, title: "Mesai Ne Zaman Biter?", coverSrc: "/egitim/kapaklar/soru-2.png", videoSrc: "/egitim/videolar/soru-2.mp4", youtubeId: "8LF1rPsQaRs" },
     { id: 3, title: "Mobbing Nedir?", coverSrc: "/egitim/kapaklar/soru-3.png", videoSrc: "/egitim/videolar/soru-3.mp4", youtubeId: "IVU9m6j-KQM" },
     { id: 4, title: "İşveren Ne Kadar Denetleyebilir?", coverSrc: "/egitim/kapaklar/soru-4.png", videoSrc: "/egitim/videolar/soru-4.mp4", youtubeId: "DXJ5N6kmmpo" },
     { id: 5, title: "Uzaktan Çalışma İş Sağlığı ve Güvenliği", coverSrc: "/egitim/kapaklar/soru-5.png", videoSrc: "/egitim/videolar/soru-5.mp4", youtubeId: "0FRPJITUT-0" },
